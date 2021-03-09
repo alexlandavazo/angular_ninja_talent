@@ -7,7 +7,7 @@ export const resetUsers = createAction('[Users] Reset Users');
 // Select User
 export const selectUser = createAction(
   '[Users] Select User',
-  props<User>()
+  props<{ selectedId: string }>()
 );
 
 // Load Users
