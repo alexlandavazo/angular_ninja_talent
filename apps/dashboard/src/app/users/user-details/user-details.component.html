@@ -1,0 +1,92 @@
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="currentUser.id; else elseBlock">
+      Editing {{ originalFirstname }}
+    </span>
+    <ng-template #elseBlock>
+      Select User
+    </ng-template>
+  </mat-card-title>
+  <form #form="ngForm" (submit)="saved.emit(currentUser)">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="First Name"
+          [(ngModel)]="currentUser.firstname"
+          type="text"
+          name="firstname"
+          required />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Last Name"
+          [(ngModel)]="currentUser.lastname"
+          type="text"
+          name="lastname"
+          required />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Email"
+          [(ngModel)]="currentUser.email"
+          type="text"
+          name="email"
+          required />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Birth Date"
+          [(ngModel)]="currentUser.birthDate"
+          type="text"
+          name="birthDate"
+          required />
+      </mat-form-field>
+      <mat-form-field class="middle-width">
+        <input
+          matInput
+          placeholder="Street"
+          [(ngModel)]="currentUser.address.street"
+          type="text"
+          name="street"
+          required />
+      </mat-form-field>
+      <mat-form-field class="middle-width">
+        <input
+          matInput
+          placeholder="City"
+          [(ngModel)]="currentUser.address.city"
+          type="text"
+          name="city"
+          required />
+      </mat-form-field>
+      <mat-form-field class="middle-width">
+        <input
+          matInput
+          placeholder="Country"
+          [(ngModel)]="currentUser.address.country"
+          type="text"
+          name="country"
+          required />
+      </mat-form-field>
+      <mat-form-field class="middle-width">
+        <input
+          matInput
+          placeholder="Postal Code"
+          [(ngModel)]="currentUser.address.postalcode"
+          type="text"
+          name="postalcode"
+          required />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button [disabled]="form.invalid" type="submit" mat-button color="primary">Save</button>
+      <button type="button" mat-button (click)="cancelled.emit();form.reset();">
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
