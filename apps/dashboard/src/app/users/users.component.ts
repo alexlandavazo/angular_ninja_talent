@@ -3,7 +3,7 @@ import { User } from '@fem/api-interfaces';
 import { UsersFacade } from '@fem/core-state';
 import { Observable } from 'rxjs';
 
-const emptyUser: User = {
+export const emptyUser: User = {
   id: null,
   firstname: '',
   lastname: '',

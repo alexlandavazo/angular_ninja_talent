@@ -1,6 +1,6 @@
 import { UsersEntity } from './users.models';
 import * as UsersActions from './users.actions';
-import { State, initialState, reducer } from './users.reducer';
+import { UsersState, initialUsersState, usersReducer } from './users.reducer';
 
 describe('Users Reducer', () => {
   const createUsersEntity = (id: string, name = '') =>
@@ -19,7 +19,7 @@ describe('Users Reducer', () => {
       ];
       const action = UsersActions.loadUsersSuccess({ users });
 
-      const result: State = reducer(initialState, action);
+      const result: UsersState = usersReducer(initialUsersState, action);
 
       expect(result.loaded).toBe(true);
       expect(result.ids.length).toBe(2);
@@ -30,9 +30,9 @@ describe('Users Reducer', () => {
     it('should return the previous state', () => {
       const action = {} as any;
 
-      const result = reducer(initialState, action);
+      const result = usersReducer(initialUsersState, action);
 
-      expect(result).toBe(initialState);
+      expect(result).toBe(initialUsersState);
     });
   });
 });

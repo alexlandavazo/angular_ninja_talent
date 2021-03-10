@@ -15,9 +15,9 @@ import * as UsersSelectors from './users.selectors';
 import * as UsersActions from './users.actions';
 import {
   USERS_FEATURE_KEY,
-  State,
-  initialState,
-  reducer,
+  UsersState,
+  initialUsersState,
+  usersReducer,
 } from './users.reducer';
 
 interface TestSchema {
@@ -39,7 +39,7 @@ describe('UsersFacade', () => {
     beforeEach(() => {
       @NgModule({
         imports: [
-          StoreModule.forFeature(USERS_FEATURE_KEY, reducer),
+          StoreModule.forFeature(USERS_FEATURE_KEY, usersReducer),
           EffectsModule.forFeature([UsersEffects]),
         ],
         providers: [UsersFacade],

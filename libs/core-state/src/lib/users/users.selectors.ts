@@ -56,3 +56,7 @@ export const getSelectedUser = createSelector(
     return selectedId ? entities[selectedId] : emptyUser;
   }
 );
+export function getSelected(state: any) {
+  throw new Error('Function not implemented.');
+}
+

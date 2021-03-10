@@ -1,5 +1,5 @@
 import { UsersEntity } from './users.models';
-import { State, usersAdapter, initialState } from './users.reducer';
+import { UsersState, usersAdapter, initialUsersState } from './users.reducer';
 import * as UsersSelectors from './users.selectors';
 
 describe('Users Selectors', () => {
@@ -22,7 +22,7 @@ describe('Users Selectors', () => {
           createUsersEntity('PRODUCT-CCC'),
         ],
         {
-          ...initialState,
+          ...initialUsersState,
           selectedId: 'PRODUCT-BBB',
           error: ERROR_MSG,
           loaded: true,
