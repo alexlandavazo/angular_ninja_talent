@@ -8,6 +8,7 @@
     "nx": "nx",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "node dist/apps/api/main",
     "build:stats": "ng build --stats-json",
     "analyze": "webpack-bundle-analyzer dist/apps/dashboard/stats.json",
     "test": "ng test",
