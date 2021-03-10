@@ -11,7 +11,10 @@ export interface User extends BaseEntity {
   lastname: string,
   email: string,
   birthDate: string,
-  address: Address
+  street: string,
+  city: string,
+  country: string,
+  postalcode: string
 }
 
 export interface Address extends BaseEntity {

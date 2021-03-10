@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 @Injectable()
 export class UsersService {
   mockUsers: User[] = [
-    { id: '1', firstname: 'Alejandro', lastname: 'Landavazo', email: 'alejandrolandavazo@gmail.com', birthDate: '23-05-1997', address: { id: '1', street: 'Tubac 29', city: 'Hermosillo', country: 'MX', postalcode: '83113' } },
+    { id: '1', firstname: 'Alejandro', lastname: 'Landavazo', email: 'alejandrolandavazo@gmail.com', birthDate: '23-05-1997', street: 'Tubac 29', city: 'Hermosillo', country: 'MX', postalcode: '83113' },
   ];
 
   findAll() {

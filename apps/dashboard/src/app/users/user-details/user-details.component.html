@@ -4,7 +4,7 @@
       Editing {{ originalFirstname }}
     </span>
     <ng-template #elseBlock>
-      Select User
+      Create a New User
     </ng-template>
   </mat-card-title>
   <form #form="ngForm" (submit)="saved.emit(currentUser)">
@@ -41,7 +41,7 @@
           matInput
           placeholder="Birth Date"
           [(ngModel)]="currentUser.birthDate"
-          type="text"
+          type="date"
           name="birthDate"
           required />
       </mat-form-field>
@@ -49,7 +49,7 @@
         <input
           matInput
           placeholder="Street"
-          [(ngModel)]="currentUser.address.street"
+          [(ngModel)]="currentUser.street"
           type="text"
           name="street"
           required />
@@ -58,25 +58,33 @@
         <input
           matInput
           placeholder="City"
-          [(ngModel)]="currentUser.address.city"
+          [(ngModel)]="currentUser.city"
           type="text"
           name="city"
           required />
       </mat-form-field>
       <mat-form-field class="middle-width">
-        <input
-          matInput
-          placeholder="Country"
-          [(ngModel)]="currentUser.address.country"
-          type="text"
-          name="country"
-          required />
+        <mat-label>Country</mat-label>
+        <mat-select>
+          <mat-option value="ES">
+            ES
+          </mat-option>
+          <mat-option value="UK">
+            UK
+          </mat-option>
+          <mat-option value="DE">
+            DE
+          </mat-option>
+          <mat-option value="US">
+            US
+          </mat-option>
+        </mat-select>
       </mat-form-field>
       <mat-form-field class="middle-width">
         <input
           matInput
           placeholder="Postal Code"
-          [(ngModel)]="currentUser.address.postalcode"
+          [(ngModel)]="currentUser.postalcode"
           type="text"
           name="postalcode"
           required />

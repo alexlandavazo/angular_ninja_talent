@@ -16,7 +16,7 @@ export interface UsersPartialState {
   readonly [USERS_FEATURE_KEY]: UsersState;
 }
 
-export const usersAdapter: EntityAdapter<User> = createEntityAdapter();
+export const usersAdapter: EntityAdapter<User> = createEntityAdapter<User>({ selectId: (user: User) => user.id });
 
 export const initialUsersState: UsersState = usersAdapter.getInitialState(
   {

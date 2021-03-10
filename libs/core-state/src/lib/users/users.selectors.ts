@@ -40,13 +40,10 @@ const emptyUser: User = {
   lastname: '',
   birthDate: '',
   email: '',
-  address: {
-    id: null,
-    street: '',
-    country: '',
-    city: '',
-    postalcode: ''
-  }
+  street: '',
+  country: '',
+  city: '',
+  postalcode: ''
 }
 
 export const getSelectedUser = createSelector(

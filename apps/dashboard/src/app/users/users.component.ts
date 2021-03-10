@@ -9,13 +9,10 @@ export const emptyUser: User = {
   lastname: '',
   birthDate: '',
   email: '',
-  address: {
-    id: null,
-    street: '',
-    country: '',
-    city: '',
-    postalcode: ''
-  }
+  street: '',
+  country: '',
+  city: '',
+  postalcode: ''
 }
 
 @Component({
@@ -53,6 +50,8 @@ export class UsersComponent implements OnInit {
 
   saveUser(user: User) {
     this.usersFacade.saveUser(user);
+    this.loadUsers();
+    this.selectUser(emptyUser);
   }
 
   deleteUser(user: User) {
