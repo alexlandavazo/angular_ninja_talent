@@ -64,21 +64,13 @@
           required />
       </mat-form-field>
       <mat-form-field class="middle-width">
-        <mat-label>Country</mat-label>
-        <mat-select>
-          <mat-option value="ES">
-            ES
-          </mat-option>
-          <mat-option value="UK">
-            UK
-          </mat-option>
-          <mat-option value="DE">
-            DE
-          </mat-option>
-          <mat-option value="US">
-            US
-          </mat-option>
-        </mat-select>
+        <input
+          matInput
+          placeholder="Country"
+          [(ngModel)]="currentUser.country"
+          type="text"
+          name="country"
+          required />
       </mat-form-field>
       <mat-form-field class="middle-width">
         <input

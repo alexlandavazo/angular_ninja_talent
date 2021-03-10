@@ -1,4 +1,5 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,6 +25,8 @@ export const mockUsersFacade = {
 describe('UsersComponent', () => {
   let component: UsersComponent;
   let fixture: ComponentFixture<UsersComponent>;
+  let de: DebugElement;
+  let usersFacade: UsersFacade;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -51,6 +54,8 @@ describe('UsersComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(UsersComponent);
     component = fixture.componentInstance;
+    de = fixture.debugElement;
+    usersFacade = TestBed.inject(UsersFacade);
     fixture.detectChanges();
   });
 
