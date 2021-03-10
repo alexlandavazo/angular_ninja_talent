@@ -1,24 +1,4 @@
-# Angular Production Course
-
-![Angular Production Course App](apps/dashboard/src/assets/screenshots/app.png)
-
-This is the sample project for the Angular Production course for Frontend Masters. 
-
-The sample project includes an Angular web application and a mock RESTful API  within an Nx workspace by NRWL. The Angular application uses state and data libs to manage state and handle server communication. The state lib is built around NgRx and the application is entirely reactive. 
-
-## Prerequisites
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- Node.js and NPM – we recommend using [NVM (Linux/Mac)](https://github.com/creationix/nvm) or [NVM-Windows (Windows)](https://github.com/coreybutler/nvm-windows)
-- Install Angular CLI via `npm i -g @angular/cli`
-
 ## Web: Getting Started
-
-```
-git clone https://github.com/onehungrymind/fem-production-angular.git
-cd fem-production-angular
-yarn
-npm run serve:all
-```
 
 The `serve:all` command is a convenience methods that runs the `serve:api` and `serve:web` commands concurrently. You can run each command separately if you need to.
 
@@ -29,8 +9,6 @@ The `serve:all` command is a convenience methods that runs the `serve:api` and `
 ```
 
 The web application will open to [http://localhost:4200](http://localhost:4200) in your browser.
-
-![Angular Production Course Api](apps/dashboard/src/assets/screenshots/api.png)
 
 You can see the API by navigating to [http://localhost:3333/api/](http://localhost:3333/api/) in your browser.
 
