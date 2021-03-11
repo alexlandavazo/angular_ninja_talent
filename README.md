@@ -2,7 +2,7 @@
 Tuve que utilizar unas librerias que fueran compatibles con mi equipo por lo que para iniciar la aplicacion tiene que correr: `npm install --force`.
 
 ## Web: Getting Started
-Para correr el proyecto y la api basta con correr el comando `serve:all`. Tambien los puedes correr por separado:
+Para correr el proyecto basta con correr el comando `serve:web`. Tambien los puedes correr por separado:
   
 ```
 "serve:api": "nx run api:serve",
@@ -12,7 +12,7 @@ Para correr el proyecto y la api basta con correr el comando `serve:all`. Tambie
 
 La app de angular se abrira en [http://localhost:4200](http://localhost:4200).
 
-La API se mostrara en [http://localhost:3333/api/](http://localhost:3333/api/) con su metodos por postman. 
+La API se mostrara en [https://mysterious-ocean-30392.herokuapp.com/api/](https://mysterious-ocean-30392.herokuapp.com/api/) con su metodos por postman. La API fue desarrollada con Nest.js 
 
 > Note: El proyecto fue creado en una Macbook con chip M1.
 
